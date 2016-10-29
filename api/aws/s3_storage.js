@@ -5,6 +5,7 @@ let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 let xhr = new XMLHttpRequest();
 let AWS = require('aws-sdk');
 let uuid = require('node-uuid');
+let insta = require('../../config/instagram')
 let _ = require('lodash');
 
 
@@ -27,7 +28,7 @@ return new Promise(function(resolve, reject){
   })
 }
 
-getPhotos('https://api.instagram.com/v1/users/self/media/recent/?access_token=35010847.50ad594.be11ced7b6234fbfbfadc3793211e5ad')
+getPhotos(insta.url)
 .then(function(response){
   let newData= JSON.parse(response);
   for(var i = 0; i<newData.data.length; i++){

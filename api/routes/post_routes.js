@@ -1,3 +1,4 @@
+'use strict';
 
 var Blog = require('./models/blog_posts');
 var jsonParser = require('body-parser').json();
@@ -13,15 +14,6 @@ app.get('/api/blogs', function(req, res){
   });
 
 });
-// app.get('/api/blogs/:id', function(req, res){
-//   Blog.find(function(err, blogs){
-//     if(err)
-//     res.send(err);
-//
-//     res.json(blogs)
-//   });
-//
-// });
 
 app.post('/api/blogs', jsonParser, function(req, res){
   var newBlog = new Blog(req.body);
