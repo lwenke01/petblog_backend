@@ -4,3 +4,4 @@ test
 instagram.js
 SETUP.md
 api/aws/output.js
+api/aws/image_upload.js

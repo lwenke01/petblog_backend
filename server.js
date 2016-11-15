@@ -27,7 +27,8 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/build'));
 
 //routes
-require('/api/routes')(app);
+require('/api/routes/post_routes')(app);
+require('/api/routes/city_routes')(app);
 app.use('/api', router);
 
 app.listen(port);

@@ -42,10 +42,7 @@ app.delete('/api/blogs/:id',(req, res)=>{
     res.status(200).json({msg: 'successfully deleted'});
   });
 });
-// frontend routes
-app.get('*', function(req, res){
-  res.sendFile('./public/index.html');
-});
+
 
 
 };

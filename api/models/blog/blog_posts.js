@@ -1,8 +1,7 @@
 'use strict';
 
-const mongoose = require('mongoose').
+const mongoose = require('mongoose');
 Schema = mongoose.Schema;
-
 
 let PostSchema = new Schema({
   post_id: {type: Schema.Types.ObjectId, index: true},

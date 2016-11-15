@@ -4,8 +4,6 @@
 const mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
-
-
 let CommentSchema = new Schema({
   _comments: {
     type: Number,
@@ -15,7 +13,6 @@ let CommentSchema = new Schema({
   comment_author: { type: String, required: true },
   comment_body: {type: String, required: true}
 });
-
 let Comment =  mongoose.model('Comment', CommentSchema);
 
 module.exports = {

@@ -5,8 +5,8 @@ const mongoose = require('mongoose'),
 
 let OwnerSchema = new Schema({
   owner_id: {
-    type: Schema.Types.ObjectId,
-    index: true
+    type: Schema.Types.ObjectId
+
   },
   owner_name: {
     first: {type: String, required: true },
@@ -16,15 +16,6 @@ let OwnerSchema = new Schema({
   state: {type: String, required: true },
   email: {type: String, required: true },
   phone: {type: Number, required: false },
-  owner_media: {
-    instagram: {type: String, required: false},
-    twitter: {type: String, required: false},
-    facebook: {type:String, required: false},
-    snapchat: {type: String, required: false},
-    youtube: {type: String, required: false},
-    other: {type: String, required: false},
-    personal: {type: String, required: false}
-  },
   pet: [{type: Schema.Types.ObjectId, ref: 'Pet'}]
 
 });
